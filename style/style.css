@@ -1,5 +1,14 @@
+h1, h2, h3, h4 {
+  color: #7562E0;
+}
+
+body {
+  background-color: #181824;
+  color: #ffff;
+  font-family: "Estonia", cursive;
+  font-family: "Roboto", sans-serif;
+}
 body > header {
-  border: 2px dashed yellow;
   height: 3rem;
   display: flex;
   align-items: center;
@@ -8,7 +17,6 @@ body > header input {
   display: none;
 }
 body > header label {
-  border: 2px dashed red;
   width: 3rem;
   height: 3rem;
   position: fixed;
@@ -39,6 +47,9 @@ body > header nav {
   height: 100%;
   margin-top: 3.5rem;
 }
+body > header nav ul {
+  list-style-type: none;
+}
 body > header #toggler:checked ~ nav {
   display: block;
 }
@@ -55,4 +66,65 @@ body > header #toggler:checked ~ label div:nth-child(3) {
 }
 body > header h1 {
   margin: 0 0 0 3.5rem;
+}
+@media (min-width: 768px) {
+  body > header label {
+    display: none;
+  }
+  body > header nav {
+    position: static;
+    margin: 0;
+    display: flex;
+  }
+  body > header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 3.5rem;
+    gap: 2rem;
+    padding: 0;
+  }
+}
+body #home {
+  border: 5px dashed red;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 3.5rem;
+}
+body #home header {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border: 5px dashed blue;
+}
+body #home header .wrapper {
+  border: 5px dashed yellow;
+}
+body #home header .wrapper h2 {
+  color: #ffff;
+  margin: 0;
+}
+body #home header .wrapper p {
+  margin: 5rem auto;
+}
+body #home header .wrapper p:nth-child(2) {
+  color: red !important;
+}
+body #home header .buttonField {
+  border: 5px dashed pink;
+}
+body #home .imgWrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  border: 5px dashed violet;
+}
+body #home .imgWrapper img {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  body #home {
+    padding: 7rem 0;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=style.css.map */

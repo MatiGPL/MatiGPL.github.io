@@ -1,11 +1,27 @@
-body > header{
-    border:2px dashed yellow;
+$darkenColor: #181824;
+$darkColor: #000036;
+$secColor: #282162;
+$primaryColor: #7562E0;
+$white: #ffff;
+$marginSize: 3.5rem;
+
+h1,h2,h3,h4{
+    color:$primaryColor;
+}
+body {
+    background-color: $darkenColor;
+    color: $white;
+    font-family: 'Estonia', cursive;
+    font-family: 'Roboto', sans-serif;
+    
+> header{
+    // border:2px dashed yellow;
     height:3rem;
     display:flex;
     align-items: center;
     input{display:none;}
     label{
-        border:2px dashed red;
+        // border:2px dashed red;
         width:3rem;
         height:3rem;
         position:fixed;
@@ -34,13 +50,18 @@ body > header{
     }
     nav{
         display: none;
-        position:fixed;
+        position: fixed;
         // border: 2px dashed red;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        margin-top: 3.5rem;
+        margin-top: $marginSize;
+        ul{
+            list-style-type: none;
+
+        }
+        
     }
     #toggler:checked ~nav {
         display: block;
@@ -65,6 +86,78 @@ body > header{
 
 
 h1{
-    margin:0 0 0 3.5rem;
+    margin:0 0 0 $marginSize;
     }
+
+@media (min-width: 768px){
+        label {
+            display: none;
+        }
+        nav{
+            position: static;
+            margin: 0;
+            display: flex;
+            ul{
+            width: 100%;
+            // list-style-type: none;
+            display: flex;
+            justify-content: end; 
+            margin-right: $marginSize;
+            gap: 2rem;
+            padding:0;
+            }
+        }
+    }
+
+    }
+
+#home{
+    border: 5px dashed red;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 $marginSize;
+    header{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        border: 5px dashed blue;
+
+        .wrapper{
+            border: 5px dashed yellow;
+            h2{
+                color: $white;
+                margin: 0;
+            }
+            p{
+                margin: 5rem auto;
+                // &:nth-child(2){
+                //     color: red !important;
+                }
+            .desc {
+                font-weight: 500;
+                font-size: 7em;
+            }
+            }
+        }
+        .buttonField{
+            border: 5px dashed pink;
+        }
+    }
+    .imgWrapper{
+        display:flex;
+        flex: 1;
+        justify-content: center;
+        border: 5px dashed violet;
+        img {
+            max-width: 100%;
+        }
+    }
+    @media (min-width: 768px){
+        padding: $marginSize*2 0;
+        flex-direction: row;
+    }
+        
+    
+}
+
 }
