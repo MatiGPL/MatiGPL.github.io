@@ -200,9 +200,10 @@ body #services section {
 body #services section article {
   display: grid;
   place-items: center;
-  border: 2px solid;
-  border-radius: 10px;
   grid-template-rows: 2fr 1fr 4fr;
+  border: 3px solid #7562E0;
+  border-radius: 16px;
+  padding-top: 2.5em;
 }
 body #services section article img {
   align-self: end;
@@ -216,20 +217,46 @@ body #services section article p {
 body #services section article h3 {
   text-align: center;
   margin-top: 0;
+  color: #fff;
 }
-@media (min-width: 768px) and (max-width: 1060px) {
+body #services section article:nth-child(even) {
+  border-color: #fff;
+}
+body #services section article:nth-child(even) h3 {
+  color: #7562E0;
+}
+@media (min-width: 768px) and (max-width: 1250px) {
   body #services section {
     grid-template-columns: 1fr 1fr;
-  }
-  body #services section article {
-    padding-top: 0;
   }
 }
 @media (min-width: 1060px) {
   body #services section {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  body #services section article {
-    padding-top: 0;
+}
+body #projects .container {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+body #projects .container article {
+  padding: 1em;
+  background-color: #31313F;
+  border-radius: 8px;
+  max-width: 311px;
+}
+body #projects .container article img {
+  max-width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1250px) {
+  body #projects article {
+    width: calc(50% - 2.5em);
+  }
+}
+@media (min-width: 1060px) {
+  body #projects article {
+    width: calc(33% - 2.6666666667em);
   }
 }/*# sourceMappingURL=style.css.map */

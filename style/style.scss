@@ -4,6 +4,7 @@ $darkColor:#000036;
 $secondaryColor:#282162;
 $primaryColor:#7562E0;
 $white:#fff;
+$cardBackround:#31313F;
 $marginSize:3.5rem;
 
 h1,h2,h3,h4{ color:$primaryColor; }
@@ -212,9 +213,11 @@ body{
         article{
             display: grid;
             place-items: center;
-            border: 2px solid;
-            border-radius: 10px;         
             grid-template-rows: 2fr 1fr 4fr;
+            border: 3px solid $primaryColor;
+            border-radius: 16px;   
+            padding-top: 2.5em;
+
                 img{
                    align-self: end;
                 }
@@ -227,28 +230,61 @@ body{
                 h3{
                     text-align: center;
                     margin-top: 0;
+                    color:$white;
                  }
-            
+            &:nth-child(even){
+                border-color: $white;
+                h3 {color:$primaryColor;}
+            }
         }
     }
-    @media (min-width:768px)  and (max-width:1060px){
+    @media (min-width:768px)  and (max-width:1250px){
         section {
         grid-template-columns: 1fr 1fr;
-            article {
-                padding-top: 0;
-            }
+            // article {
+            //     padding-top: 0;
+            // }
         }
     }
     @media (min-width:1060px) {
         section {
         grid-template-columns: 1fr 1fr 1fr;
-            article {
-                padding-top: 0;
-            }
+            // article {
+            //     padding-top: 0;
+            // }
         }
     }
   }
 
+#projects{
+    .container{
+        
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+        article{
+            padding: 1em;
+            background-color: $cardBackround;
+            border-radius: 8px;
+            max-width: 311px;
+            img{
+                max-width: 100%;       
+            }
+        }
+    }
+    @media (min-width:768px)  and (max-width:1250px){
+            article{
+                  width:calc(50% - 2.5em);  
+            }        
+    }
+    @media (min-width:1060px) {
+        article{
+            width:calc(33% - 8em/3);  
+      }        
 
+    }
+
+}
 
 }
