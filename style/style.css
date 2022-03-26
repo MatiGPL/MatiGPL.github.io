@@ -303,7 +303,7 @@ body footer .links {
 }
 @media (min-width: 960px) {
   body footer .links {
-    grid-template-areas: "e1 e2 e3 e4 e5" !important;
+    grid-template-areas: "e1 e2 e3 e4 e5";
   }
 }
 body footer .links a {
