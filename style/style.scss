@@ -321,14 +321,14 @@ body{
 
 footer {
   // border: 2px dashed red;
-  padding: 2rem;
+  padding: 3rem;
   padding-bottom: 1rem;
   .links{
     font-size: .8em;
     display: grid;
     grid-template-areas: 
    "e4" "e2" "e3" "e5" "e1";
-   padding-bottom: 1rem;
+    padding-bottom: 1rem;
 
         // @media(min-width:1660px) {
         //   grid-template-areas: 
