@@ -23,6 +23,27 @@ h1,h2,h3,h4{ color:$primaryColor; }
     
 }
 
+@keyframes selectItem{
+  0%{
+
+    border-color: red;
+  }
+
+  50%{
+    transform: scale(1.2) rotate(5deg);
+  }
+
+  75%{
+    transform: scale(1.2) rotate(-5deg);
+  }
+
+  100%{
+    border-color: blue;
+  }
+
+}
+
+
 body{
   font-family: 'Poppins', sans-serif;
   background-color: $darkenColor;
@@ -213,6 +234,10 @@ body{
         gap: 1em;
         
         article{
+            &:hover{
+              animation: selectItem 2s infinite;
+            }
+           background-color: $darkenColor;
             display: grid;
             place-items: center;
             grid-template-rows: 2fr 1fr 4fr;
@@ -266,6 +291,9 @@ body{
         // gap: 1em;
         flex-wrap: wrap;
         article{
+            &:hover{
+            animation: selectItem 2s infinite;
+            }
             margin: 0.5em;
             padding: 1em;
             background-color: $cardBackround;
