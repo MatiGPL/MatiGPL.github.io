@@ -9,7 +9,7 @@ h1, h2, h3, h4 {
   border-radius: 5px;
   padding: 5px 15px;
   color: #fff;
-  font-size: 0.7em;
+  font-size: clamp(0.3em, 2vw, 0.7em);
 }
 .button.fill {
   background-color: #7562E0;
@@ -238,10 +238,10 @@ body #services section article:nth-child(even) h3 {
 body #projects .container {
   display: flex;
   justify-content: center;
-  gap: 1em;
   flex-wrap: wrap;
 }
 body #projects .container article {
+  margin: 0.5em;
   padding: 1em;
   background-color: #31313F;
   border-radius: 8px;
@@ -252,11 +252,77 @@ body #projects .container article img {
 }
 @media (min-width: 768px) and (max-width: 1250px) {
   body #projects article {
-    width: calc(50% - 2.5em);
+    width: calc(50% - 3em);
   }
 }
-@media (min-width: 1060px) {
+@media (min-width: 1250px) {
   body #projects article {
-    width: calc(33% - 2.6666666667em);
+    width: calc(33% - 3em);
   }
+}
+body #contact {
+  margin-top: 2em;
+}
+body #contact h3 {
+  color: #fff;
+}
+body #contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body #contact form input, body #contact form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0.5em 0;
+  background-color: #31313F;
+  border: none;
+  color: #fff;
+  outline: 0;
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 768px) {
+  body #contact {
+    display: flex;
+  }
+  body #contact header {
+    padding-right: 1.5em;
+  }
+}
+body footer {
+  padding: 2rem;
+  padding-bottom: 1rem;
+}
+body footer .links {
+  font-size: 0.8em;
+  display: grid;
+  grid-template-areas: "e4" "e2" "e3" "e5" "e1";
+  padding-bottom: 1rem;
+}
+@media (min-width: 960px) {
+  body footer .links {
+    grid-template-areas: "e1 e2 e3 e4 e5" !important;
+  }
+}
+body footer .links a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.5;
+}
+body footer .links a:nth-child(1) {
+  grid-area: e1;
+}
+body footer .links a:nth-child(2) {
+  grid-area: e2;
+}
+body footer .links a:nth-child(3) {
+  grid-area: e3;
+}
+body footer .links a:nth-child(4) {
+  grid-area: e4;
+}
+body footer .links a:nth-child(5) {
+  grid-area: e5;
 }/*# sourceMappingURL=style.css.map */
